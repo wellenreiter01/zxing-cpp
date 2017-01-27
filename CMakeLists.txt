@@ -6,6 +6,7 @@ project(zxing)
 cmake_minimum_required(VERSION 2.8.0)
 
 set(CMAKE_LIBRARY_PATH /opt/local/lib ${CMAKE_LIBRARY_PATH})
+set (CMAKE_BINARY_DIR ./build)
 
 # Check for polluted source tree.
 if(EXISTS ${CMAKE_SOURCE_DIR}/CMakeCache.txt OR
