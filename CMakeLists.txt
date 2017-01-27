@@ -10,10 +10,11 @@ set(CMAKE_LIBRARY_PATH /opt/local/lib ${CMAKE_LIBRARY_PATH})
 # Check for polluted source tree.
 if(EXISTS ${CMAKE_SOURCE_DIR}/CMakeCache.txt OR
     EXISTS ${CMAKE_SOURCE_DIR}/CMakeFiles)
-    message(FATAL_ERROR
+    message(WARNING
         "Source directory is polluted:"
         "\n  * remove CMakeCache.txt"
         "\n  * remove CMakeFiles directory")
+	rm -rf CMakeCache.txt CMakeFiles
 endif()
 
 # Suppress in-source builds.
