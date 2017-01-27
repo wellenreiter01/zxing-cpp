@@ -13,8 +13,9 @@ if(EXISTS ${CMAKE_SOURCE_DIR}/CMakeCache.txt OR
     message(WARNING
         "Source directory is polluted:"
         "\n  * remove CMakeCache.txt"
-        "\n  * remove CMakeFiles directory")
-	rm -rf CMakeCache.txt CMakeFiles
+        "\n  * remove CMakeFiles directory"
+	"\n  * and run cmake again" )
+	
 endif()
 
 # Suppress in-source builds.
