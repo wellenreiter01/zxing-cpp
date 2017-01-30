@@ -72,12 +72,12 @@ add_library(libzxing ${LIBZXING_FILES})
 set_target_properties(libzxing PROPERTIES PREFIX "")
 
 find_package(Iconv)
-if(ICONV_FOUND)
-    include_directories(${ICONV_INCLUDE_DIR})
-    target_link_libraries(libzxing ${ICONV_LIBRARIES})
-else()
+#if(ICONV_FOUND)
+ #   include_directories(${ICONV_INCLUDE_DIR})
+  #  target_link_libraries(libzxing ${ICONV_LIBRARIES})
+#else()
     add_definitions(-DNO_ICONV=1)
-endif()
+#endif()
 
 # Add OpenCV cli executable
 if(OpenCV_FOUND)
