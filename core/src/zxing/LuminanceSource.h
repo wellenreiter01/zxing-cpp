@@ -28,10 +28,11 @@ namespace zxing {
 
 class LuminanceSource : public Counted {
  private:
-  const int width;
-  const int height;
+  
 
  public:
+  const int width;
+  const int height;
   LuminanceSource(int width, int height);
   virtual ~LuminanceSource();
 
