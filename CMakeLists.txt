@@ -71,7 +71,7 @@ include_directories("./core/src/")
 add_library(libzxing ${LIBZXING_FILES})
 set_target_properties(libzxing PROPERTIES PREFIX "")
 
-find_package(Iconv)
+#find_package(Iconv)
 #if(ICONV_FOUND)
  #   include_directories(${ICONV_INCLUDE_DIR})
   #  target_link_libraries(libzxing ${ICONV_LIBRARIES})
